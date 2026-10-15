@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            border: 0;
+        }
+
+        header {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.20);
+        }
+        
+        pre {
+            background-color: #ebedee;
+            width:50%;
+            margin-top: 20px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 0px;
+        }
+        
+
+        .titulo-principal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:#011C6B ;
+            color: white;
+            height: 100px;
+        }
+
+        .seletor-titulo {
+            margin-top: 50px;
+            margin-left: 50px;
+            font-size: 30px;
+        }
+
+        .seletor-paragrafo {
+            margin-top: 5px;
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-principal">Seletores Compartilhados</h1>
+        <hr>
+    </header>
+    <main>
+        <h2 class="seletor-titulo">Seletor de Atributo</h2>
+        <p class="seletor-paragrafo">O seletor a partir de atributo é usado para estilizar elementos HTML através de atributos específicos do mesmo</p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+        a[target] {
+            background-color: yellow;
+        }
+            </code>
+        </pre>
+
+        <h2 class="seletor-titulo">Seletor Descendente</h2>
+        <p class="seletor-paragrafo">O Seletor de Descendentes é usado para estilizar elementos HTML através de outros elementos</p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+        div p {
+            background-color: yellow;
+        }
+            </code>
+        </pre>
+
+        <h2 class="seletor-titulo">Seletor Filho Direto</h2>
+        <p class="seletor-paragrafo">O Seletor Filho Direto é usado para estilizar elementos HTML através de outros elementos, porém apenas a filhos diretos, e não a netos e outros elementos, ou seja, aqueles que estão diretamente dentro da classe pai  </p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+       div > p {
+            background-color: yellow;
+        }
+            </code>
+        </pre>
+
+        <h2 class="seletor-titulo">Seletor Adjacente Direto</h2>
+        <p class="seletor-paragrafo">O Seletor Adjacente Direto é usado para estilizar elementos HTML através do elemento que precede o que se quer estilizar</p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+       div + p {
+            font-size: 20px;
+        }
+            </code>
+        </pre>
+
+        <h2 class="seletor-titulo">Seletor de Irmãos Gerais</h2>
+        <p class="seletor-paragrafo">O Seletor de Irmãos Gerais é usado para estilizar elementos HTML através de um elemento pai em comum </p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+       div ~ p {
+            margin-top: 10px
+        }
+            </code>
+        </pre>
+
+        <h2 class="seletor-titulo">Seletor Universal</h2>
+        <p class="seletor-paragrafo">O Seletor Universal é usado para todos estilizar elementos HTML dentro de uma página</p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+       * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+            </code>
+        </pre>
+
+        <h2 class="seletor-titulo">Seletor de Pseudoclasse</h2>
+        <p class="seletor-paragrafo">Seletor de Pseudoclasse é usado para estilizar elementos HTML através do estado atual do mesmo</p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+       a:hover {
+            color: purple;
+        }
+            </code>
+        </pre>
+
+        <h2 class="seletor-titulo">Seletor de Pseudoelemento</h2>
+        <p class="seletor-paragrafo">Seletor de Pseudoelemento é usado para estilizar elementos HTML através de partes específicas, como primeira linha, primeira letra e outros.</p>
+        <p class="seletor-paragrafo">Exemplo:</p>
+        <pre>
+            <code>
+       p::first-letter {
+            font-size: 200%;
+        }
+            </code>
+        </pre>
+    </main>
+</body>
+</html>
